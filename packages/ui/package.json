@@ -1,0 +1,37 @@
+{
+  "name": "@xyz/ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "docs": "vocs dev",
+    "docs-build": "vocs build",
+    "preview": "vocs preview",
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@tailwindcss/vite": "^4.1.10",
+    "lucide-react": "^0.515.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^4.1.10",
+    "vocs": "latest"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4",
+    "@storybook/addon-a11y": "^9.0.9",
+    "@storybook/addon-docs": "^9.0.9",
+    "@storybook/addon-themes": "^9.0.9",
+    "@storybook/addon-vitest": "^9.0.9",
+    "@storybook/react-vite": "^9.0.9",
+    "@types/react": "latest",
+    "@vitest/browser": "^3.2.3",
+    "@vitest/coverage-v8": "^3.2.3",
+    "playwright": "^1.53.0",
+    "storybook": "^9.0.9",
+    "typescript": "latest",
+    "vitest": "^3.2.3"
+  }
+}

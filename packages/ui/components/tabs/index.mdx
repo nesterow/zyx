@@ -1,0 +1,43 @@
+import TabList from "./TabList.tsx";
+import TabSeparator from "./TabSeparator.tsx";
+import Scrollable from "../scrollable";
+import {
+  dragLeaveHandler,
+  dragOverHandler,
+  dropHandler,
+} from "@xyz/ui/misc/dragutils";
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Tabs Anatomy" />
+
+<Scrollable x>
+    <TabList
+        className="flex items-stretch justify-start position-relative h-8 text-nowrap"
+        separator={(
+            <TabSeparator
+                title="Tab Separator"
+                onDrop={(ev) => {
+                    console.log('dropped', ev);
+                }}
+                className="flex justify-between group [&.t-s-drop]:bg-red-500 [&.t-s-drop]:min-w-[35px] bg-white h-auto min-w-[16px] min-w-[16px] hover:min-w-[35px] transition-min-width duration-600 border-0">
+                <div className="border-gray-200 border-1 border-dotted w-full group-hover:border-gray-300" />
+                <button className="bg-gray-200 flex justify-center items-center overflow-hidden min-h-4 h-4 min-w-0 w-0 group-hover:min-w-4 transition-min-width duration-600">
+                    +
+                </button>
+                <button className="bg-gray-200 flex justify-center items-center overflow-hidden min-h-full h-4 w-0 group-[.t-s-drop]:min-w-4 pointer-events-none" />
+                <div className="border-gray-200 border-1 border-dotted w-full group-hover:border-gray-300" />
+            </TabSeparator>
+        )}>
+        {[1,2,3,4,5,6,7,8].map((_, i) => (
+        <section draggable className="group flex items-center p-0" onDrop={dropHandler('drop', () => {})} onDragOver={dragOverHandler('drop')} onDragLeave={dragLeaveHandler('drop')}>
+            <div className="flex items-center justify-center overflow-hidden w-0 min-w-0 group-[.drop]:min-w-[16px] h-full bg-gray-400 transition-min-width duration-400">
+
+            </div>
+            <button className="bg-gray-200 h-8 p-3 m-0 flex items-center group-[.drop]:bg-gray-100">
+                Tab {i + 1}
+            </button>
+        </section>
+        ))}
+    </TabList>
+
+</Scrollable>

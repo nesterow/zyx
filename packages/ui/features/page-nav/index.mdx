@@ -1,0 +1,43 @@
+import PageNav from "./PageNav.tsx";
+import { Meta } from "@storybook/addon-docs/blocks";
+import "../../theme.css";
+
+<Meta title="Page Tabs Navigation" />
+
+## Example #1
+
+(Menu on top)
+
+<div className="sb-unstyled">
+  <PageNav
+    items={[
+      { id: "start", label: "Start", disabled: true },
+      { id: "1", label: "Page 1" },
+      { id: "2", label: "Page 2" },
+      { id: "3", label: "Page 3" },
+      { id: "4", label: "Page 4" },
+      { id: "5", label: "Page 5" },
+      { id: "6", label: "Page 6" },
+      { id: "end", label: "End", disabled: true },
+    ]}
+  ></PageNav>
+</div>
+
+## Usage
+
+- Use <kbd>Shift+Wheel</kbd> to scroll the tabs
+
+<div className="sb-unstyled bottom-4 absolute max-w-[1024px]">
+  <PageNav
+    items={[
+      { id: "start", label: "Start", disabled: true },
+      { id: "1", label: "Page 1" },
+      { id: "2", label: "Page 2" },
+      { id: "3", label: "Page 3" },
+      { id: "4", label: "Page 4" },
+      { id: "5", label: "Page 5" },
+      { id: "6", label: "Page 6" },
+      { id: "end", label: "End", disabled: true },
+    ]}
+  ></PageNav>
+</div>
