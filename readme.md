@@ -1,6 +1,6 @@
 # XYZ Playgrounds
 
-[UI Storybook](https://xyz-playground-tau.vercel.app/ui/storybook-static/)
+[UI Storybook](https://xyz-playground-tau.vercel.app/)
 
 ## Development
 
